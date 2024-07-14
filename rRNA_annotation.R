@@ -1,3 +1,5 @@
+args <- commandArgs(T)
+out <- args[1]
 df <- read.table(paste0(out,'annotation_count'))
 colnames(df) <- c('read_count','long_anno')
 meta <- readRDS(paste0(out,'annotation_metadata.rds'))
