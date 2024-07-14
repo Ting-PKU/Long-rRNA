@@ -2,6 +2,7 @@ args <- commandArgs(T)
 out <- args[1]
 rRNA <- args[2]
 min_length <- args[3]
+min_length <- as.numeric(min_length)
 meta <- readRDS(paste0(out,'annotation_metadata.rds'))
 pos <- read.table(paste0(out,'reads_position'),stringsAsFactors = F)
 # screen reads
